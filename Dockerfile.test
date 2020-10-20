@@ -3,8 +3,7 @@ FROM php:7.2-buster
 ARG DEBIAN_FRONTEND=noninteractive
 
 # php ram limit
-RUN php -d memory_limit=-1
-
+ENV COMPOSER_MEMORY_LIMIT=-1
 # SYS DEP
 RUN apt-get update
 RUN apt-get -y install apt-transport-https ca-certificates curl libxml2 zlib1g-dev libpng-dev libicu-dev g++ 
