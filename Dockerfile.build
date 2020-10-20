@@ -2,6 +2,9 @@ FROM php:7.2-apache-buster
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+# php ram limit
+RUN php -d memory_limit=-1
+
 # APACHE CONF
 RUN a2enmod rewrite
 
