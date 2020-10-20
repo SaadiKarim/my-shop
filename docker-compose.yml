@@ -19,7 +19,7 @@ services:
     apache:
         build:
             context: .
-            dockerfile: ./build/Dockerfile
+            dockerfile: ./build-dockerfile
         # container_name: prestashop-git
         # image: prestashop/prestashop-git:7
         environment:
