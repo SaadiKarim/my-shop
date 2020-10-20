@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'phpunit/phpunit' } }
+    agent { dockerfile true }
     stages {
         stage('unitTest') {
             steps {
-                sh 'phpunit --version'
+                sh './vendor/bin/phpunit --version'
             }
         }
     }
