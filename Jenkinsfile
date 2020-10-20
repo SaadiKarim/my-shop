@@ -5,6 +5,11 @@ pipeline {
         }
     }
     stages {
+        stage('install') {
+            steps {
+                sh 'composer install -n'
+            }
+        }
         stage('unitTest') {
             steps {
                 sh './vendor/bin/phpunit --version'
