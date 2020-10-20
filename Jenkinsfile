@@ -15,5 +15,11 @@ pipeline {
                 sh './vendor/bin/phpunit --version'
             }
         }
+        
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: 'vendor/', fingerprint: true
+        }
     }
 }
